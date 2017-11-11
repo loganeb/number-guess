@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Number Guessing Game - AngularJS</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/portfolio-item.css" rel="stylesheet">
+    <script src="https://code.angularjs.org/1.6.6/angular.min.js"></script>
+    <script src="number-guess.js"></script>
+
+  </head>
+
+  <body ng-app="numberGuessApp">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="http://loganbynes.com/">Logan Bynes</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="http://loganbynes.com/about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://loganbynes.com/contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <!-- Portfolio Item Heading -->
+      <h1 class="my-4">Number Guessing Game
+        <small>Built using Angularjs</small>
+      </h1>
+
+      <!-- Portfolio Item Row -->
+      <div class="row">
+
+        <div class="col-md-8">
+          <div class="container">
+          <h3>See how many guesses it takes for me to guess your number.</h3>
+          <div class="app" ng-controller="numberGuessController">
+            {{message}}
+            <div ng-show="startStr"><button ng-click="start()">Start</button></div>
+            <div ng-show="yesnoStr"><button ng-click="greater()">Yes</button>
+              <button ng-click="notGreater()">No</button></div>
+            <div ng-show="guessStr"><button ng-click="end()">Yes</button><button
+              ng-click="lesser()">No</button></div>
+            <div ng-show="endStr"><button ng-click="start()">Play Again</button></div>
+          </div>
+        </div>
+
+        </div>
+
+        <div class="col-md-4">
+          <h3 class="my-3">Project Description</h3>
+          <p>AngularJS app that uses a sequence of guesses to find a number choosen by the user.</p>
+          <h3 class="my-3">Project Details</h3>
+          <ul>
+            <li>Author: Logan Bynes</li>
+            <li>Languages: HTML, Javascript</li>
+            <li>Frameworks: AngularJS</li>
+          </ul>
+        </div>
+
+      </div>
+      <!-- /.row -->
+
+      <!-- Related Projects Row -->
+      
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Logan Bynes 2017</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>
